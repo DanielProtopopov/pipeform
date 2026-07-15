@@ -17,6 +17,7 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+  publicDir: 'docs/static',
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
@@ -29,6 +30,11 @@ export default defineConfig({
       // Alias @ to the src directory
       '@': path.resolve(__dirname, './src'),
     },
+  },
+
+  build: {
+    outDir: 'docs',
+    emptyOutDir: false,
   },
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.

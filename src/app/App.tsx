@@ -125,9 +125,41 @@ export default function App() {
     });
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.currentTarget;
+    
+    const formIdDiv = form.querySelector('div[data-apiforms-id]');
+    const formId = formIdDiv?.getAttribute('data-apiforms-id') || "";
+
+    const formDataObj: Record<string, any> = {
+      email: email
+    };
+
+    FEATURES.forEach(f => {
+      const alt = f.title.toLowerCase().replace(/\s+/g, "-");
+      formDataObj[alt] = checked.has(f.id);
+    });
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          formId,
+          formData: formDataObj
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+    }
   }
 
   function scrollTo(id: string) {
@@ -484,7 +516,10 @@ export default function App() {
               <form
                 onSubmit={handleSubmit}
                 className="bg-card border border-border rounded-xl p-8 space-y-6"
+                action="https://apiforms.com/api/forms/submit"
               >
+              <div data-apiforms-id="XcAmlRrMLQu3NyhKnPcT"></div>
+
                 <div>
                   <label
                     htmlFor="email"
@@ -494,6 +529,7 @@ export default function App() {
                   </label>
                   <input
                     id="email"
+                    name="email"
                     type="email"
                     required
                     value={email}
@@ -524,11 +560,15 @@ export default function App() {
                         >
                           <input
                             type="checkbox"
+                            name="features"
+                            value={f.id}
                             checked={isChecked}
                             onChange={() => toggleFeature(f.id)}
                             className="accent-primary w-3.5 h-3.5 shrink-0"
                           />
-                          <span className="truncate">{f.title}</span>
+                          <span className="truncate" alt={f.title.toLowerCase().replace(/\s+/g, "-")}>
+                            {f.title}
+                          </span>
                         </label>
                       );
                     })}
