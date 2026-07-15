@@ -17,6 +17,7 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+  mode: 'development',
   publicDir: 'public',
   plugins: [
     figmaAssetResolver(),
@@ -36,6 +37,8 @@ export default defineConfig({
     outDir: 'docs',
     emptyOutDir: true,
     target: 'es2015',
+    minify: false,
+    sourcemap: true,
   },
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
