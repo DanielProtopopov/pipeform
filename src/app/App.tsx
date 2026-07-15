@@ -125,7 +125,7 @@ export default function App() {
     });
   }
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
 
@@ -143,7 +143,7 @@ export default function App() {
     setSubmitted(true);
 
    try {
-       const response = await fetch(form.action, {
+       const response = fetch(form.action, {
          method: "POST",
          headers: {"Content-Type": "application/json","Accept": "application/json"},
          body: JSON.stringify({formId,formData: formDataObj}),
