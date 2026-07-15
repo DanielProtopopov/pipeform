@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useState } from "react";
 import {
   Mail,
@@ -557,7 +558,7 @@ export default function App() {
                             onChange={() => toggleFeature(f.id)}
                             className="accent-primary w-3.5 h-3.5 shrink-0"
                           />
-                          <span className="truncate" alt={f.title.toLowerCase().replace(/\s+/g, "-")}>
+                          <span className="truncate">
                             {f.title}
                           </span>
                         </label>
