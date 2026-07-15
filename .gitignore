@@ -1,0 +1,6 @@
+/.idea/
+/.junie
+/.env
+/node_modules
+/envs
+.DS_Store
