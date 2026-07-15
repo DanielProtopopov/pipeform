@@ -35,6 +35,7 @@ export default defineConfig({
   build: {
     outDir: 'docs',
     emptyOutDir: false,
+    target: 'es2015',
   },
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.

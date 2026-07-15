@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "postbuild": "react-snap",
     "dev": "vite"
   },
   "dependencies": {
@@ -67,6 +68,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "4.1.12",
     "@vitejs/plugin-react": "4.7.0",
+    "react-snap": "^1.23.0",
     "tailwindcss": "4.1.12",
     "vite": "6.3.5",
     "webpack-cli": "^7.2.1"
@@ -87,5 +89,8 @@
     "overrides": {
       "vite": "6.3.5"
     }
+  },
+  "reactSnap": {
+    "source": "docs"
   }
 }
