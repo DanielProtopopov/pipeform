@@ -128,14 +128,11 @@ export default function App() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const action = form.action;
-    
+
     const formIdDiv = form.querySelector('div[data-apiforms-id]');
     const formId = formIdDiv?.getAttribute('data-apiforms-id') || "";
 
-    const formDataObj: Record<string, any> = {
-      email: email
-    };
+    const formDataObj: Record<string, any> = {email: email};
 
     FEATURES.forEach(f => {
       const alt = f.title.toLowerCase().replace(/\s+/g, "-");
@@ -148,14 +145,8 @@ export default function App() {
    try {
        const response = await fetch(form.action, {
          method: "POST",
-         headers: {
-           "Content-Type": "application/json",
-           "Accept": "application/json",
-         },
-         body: JSON.stringify({
-           formId,
-           formData: formDataObj
-         }),
+         headers: {"Content-Type": "application/json","Accept": "application/json"},
+         body: JSON.stringify({formId,formData: formDataObj}),
        });
      } catch (error) {
        console.error("Submission error:", error);
