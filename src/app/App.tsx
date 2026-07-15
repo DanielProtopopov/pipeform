@@ -125,9 +125,10 @@ export default function App() {
     });
   }
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
+    const action = form.action;
     
     const formIdDiv = form.querySelector('div[data-apiforms-id]');
     const formId = formIdDiv?.getAttribute('data-apiforms-id') || "";
@@ -141,25 +142,23 @@ export default function App() {
       formDataObj[alt] = checked.has(f.id);
     });
 
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-        },
-        body: JSON.stringify({
-          formId,
-          formData: formDataObj
-        }),
-      });
+    // Display thank-you immediately
+    setSubmitted(true);
 
-      if (response.ok) {
-        setSubmitted(true);
-      }
-    } catch (error) {
+    // Send data in the background
+    fetch(action, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify({
+        formId,
+        formData: formDataObj
+      }),
+    }).catch((error) => {
       console.error("Submission error:", error);
-    }
+    });
   }
 
   function scrollTo(id: string) {
