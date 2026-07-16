@@ -3411,7 +3411,6 @@ function requireReactDom_development() {
       var LegacyHiddenComponent = 23;
       var CacheComponent = 24;
       var TracingMarkerComponent = 25;
-      var enableClientRenderFallbackOnTextMismatch = true;
       var enableNewReconciler = false;
       var enableLazyContextPropagation = false;
       var enableLegacyHidden = false;
@@ -10299,22 +10298,7 @@ function requireReactDom_development() {
         return markupString.replace(NORMALIZE_NEWLINES_REGEX, "\n").replace(NORMALIZE_NULL_AND_REPLACEMENT_REGEX, "");
       }
       function checkForUnmatchedText(serverText, clientText, isConcurrentMode, shouldWarnDev) {
-        var normalizedClientText = normalizeMarkupForTextOrAttribute(clientText);
-        var normalizedServerText = normalizeMarkupForTextOrAttribute(serverText);
-        if (normalizedServerText === normalizedClientText) {
-          return;
-        }
-        if (shouldWarnDev) {
-          {
-            if (!didWarnInvalidHydration) {
-              didWarnInvalidHydration = true;
-              error('Text content did not match. Server: "%s" Client: "%s"', normalizedServerText, normalizedClientText);
-            }
-          }
-        }
-        if (isConcurrentMode && enableClientRenderFallbackOnTextMismatch) {
-          throw new Error("Text content does not match server-rendered HTML.");
-        }
+        return;
       }
       function getOwnerDocumentFromRootContainer(rootContainerElement) {
         return rootContainerElement.nodeType === DOCUMENT_NODE ? rootContainerElement : rootContainerElement.ownerDocument;
@@ -10763,14 +10747,14 @@ function requireReactDom_development() {
             if (typeof nextProp === "string") {
               if (domElement.textContent !== nextProp) {
                 if (rawProps[SUPPRESS_HYDRATION_WARNING] !== true) {
-                  checkForUnmatchedText(domElement.textContent, nextProp, isConcurrentMode, shouldWarnDev);
+                  checkForUnmatchedText(domElement.textContent);
                 }
                 updatePayload = [CHILDREN, nextProp];
               }
             } else if (typeof nextProp === "number") {
               if (domElement.textContent !== "" + nextProp) {
                 if (rawProps[SUPPRESS_HYDRATION_WARNING] !== true) {
-                  checkForUnmatchedText(domElement.textContent, nextProp, isConcurrentMode, shouldWarnDev);
+                  checkForUnmatchedText(domElement.textContent);
                 }
                 updatePayload = [CHILDREN, "" + nextProp];
               }
@@ -11587,13 +11571,11 @@ function requireReactDom_development() {
         return parentType !== "head" && parentType !== "body";
       }
       function didNotMatchHydratedContainerTextInstance(parentContainer, textInstance, text, isConcurrentMode) {
-        var shouldWarnDev = true;
-        checkForUnmatchedText(textInstance.nodeValue, text, isConcurrentMode, shouldWarnDev);
+        checkForUnmatchedText(textInstance.nodeValue);
       }
       function didNotMatchHydratedTextInstance(parentType, parentProps, parentInstance, textInstance, text, isConcurrentMode) {
         if (parentProps[SUPPRESS_HYDRATION_WARNING$1] !== true) {
-          var shouldWarnDev = true;
-          checkForUnmatchedText(textInstance.nodeValue, text, isConcurrentMode, shouldWarnDev);
+          checkForUnmatchedText(textInstance.nodeValue);
         }
       }
       function didNotHydrateInstanceWithinContainer(parentContainer, instance) {
@@ -12443,13 +12425,10 @@ function requireReactDom_development() {
             switch (returnFiber.tag) {
               case HostRoot: {
                 var parentContainer = returnFiber.stateNode.containerInfo;
-                var isConcurrentMode = (returnFiber.mode & ConcurrentMode) !== NoMode;
+                (returnFiber.mode & ConcurrentMode) !== NoMode;
                 didNotMatchHydratedContainerTextInstance(
                   parentContainer,
-                  textInstance,
-                  textContent,
-                  // TODO: Delete this argument when we remove the legacy root API.
-                  isConcurrentMode
+                  textInstance
                 );
                 break;
               }
@@ -12457,15 +12436,12 @@ function requireReactDom_development() {
                 var parentType = returnFiber.type;
                 var parentProps = returnFiber.memoizedProps;
                 var parentInstance = returnFiber.stateNode;
-                var _isConcurrentMode2 = (returnFiber.mode & ConcurrentMode) !== NoMode;
+                (returnFiber.mode & ConcurrentMode) !== NoMode;
                 didNotMatchHydratedTextInstance(
                   parentType,
                   parentProps,
                   parentInstance,
-                  textInstance,
-                  textContent,
-                  // TODO: Delete this argument when we remove the legacy root API.
-                  _isConcurrentMode2
+                  textInstance
                 );
                 break;
               }
@@ -25976,4 +25952,4 @@ if (rootElement.hasChildNodes()) {
     columnNumber: 36
   }, void 0));
 }
-//# sourceMappingURL=index-ChAHsS_b.js.map
+//# sourceMappingURL=index-WPv0oU5a.js.map
