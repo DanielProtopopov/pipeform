@@ -25531,21 +25531,13 @@ function App() {
           }, this),
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "mt-px bg-border rounded-b-lg overflow-hidden", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "bg-background px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4", children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex items-center gap-3", children: [
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex -space-x-1.5", children: [...Array(5)].map((_, i) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
-                "div",
-                {
-                  className: "w-2 h-2 rounded-full bg-accent",
-                  style: { opacity: Math.round((1 - i * 0.15) * 100) / 100 }
-                },
-                i,
-                false,
-                {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex -space-x-1.5", children: ["bg-accent", "bg-accent/85", "bg-accent/70", "bg-accent/55", "bg-accent/40"].map(
+                (bg, i) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: `w-2 h-2 rounded-full ${bg}` }, i, false, {
                   fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                  lineNumber: 412,
-                  columnNumber: 21
-                },
-                this
-              )) }, void 0, false, {
+                  lineNumber: 413,
+                  columnNumber: 23
+                }, this)
+              ) }, void 0, false, {
                 fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
                 lineNumber: 410,
                 columnNumber: 17
@@ -25560,7 +25552,7 @@ function App() {
                 false,
                 {
                   fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                  lineNumber: 419,
+                  lineNumber: 417,
                   columnNumber: 17
                 },
                 this
@@ -25572,7 +25564,7 @@ function App() {
             }, this),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs text-muted-foreground max-w-sm leading-relaxed", children: "Custom domain sending, multi-step forms, server-side validation, domain restrictions, team workspaces, and more are on the roadmap. Tell us what you need most in the waitlist form below." }, void 0, false, {
               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-              lineNumber: 425,
+              lineNumber: 423,
               columnNumber: 15
             }, this)
           ] }, void 0, true, {
@@ -25595,11 +25587,11 @@ function App() {
         }, this),
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-6xl mx-auto px-6", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "h-px bg-border" }, void 0, false, {
           fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-          lineNumber: 436,
+          lineNumber: 434,
           columnNumber: 9
         }, this) }, void 0, false, {
           fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-          lineNumber: 435,
+          lineNumber: 433,
           columnNumber: 7
         }, this),
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("section", { id: "waitlist", className: "py-28 px-6", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start", children: [
@@ -25614,7 +25606,7 @@ function App() {
               false,
               {
                 fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                lineNumber: 443,
+                lineNumber: 441,
                 columnNumber: 13
               },
               this
@@ -25629,14 +25621,14 @@ function App() {
               false,
               {
                 fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                lineNumber: 448,
+                lineNumber: 446,
                 columnNumber: 13
               },
               this
             ),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-muted-foreground text-sm leading-relaxed mb-8", children: "We're building PipeForm in public. Leave your email and tell us which features matter most — your input directly shapes what we build first." }, void 0, false, {
               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-              lineNumber: 453,
+              lineNumber: 451,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("ul", { className: "space-y-3 text-sm text-muted-foreground", children: [
@@ -25646,32 +25638,32 @@ function App() {
             ].map((item) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("li", { className: "flex items-center gap-2", children: [
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CircleCheck, { size: 14, className: "text-accent shrink-0" }, void 0, false, {
                 fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                lineNumber: 463,
+                lineNumber: 461,
                 columnNumber: 19
               }, this),
               item
             ] }, item, true, {
               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-              lineNumber: 462,
+              lineNumber: 460,
               columnNumber: 17
             }, this)) }, void 0, false, {
               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-              lineNumber: 456,
+              lineNumber: 454,
               columnNumber: 13
             }, this)
           ] }, void 0, true, {
             fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-            lineNumber: 442,
+            lineNumber: 440,
             columnNumber: 11
           }, this),
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: submitted ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "bg-card border border-border rounded-xl p-10 text-center", children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CircleCheck, { size: 24, className: "text-accent" }, void 0, false, {
               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-              lineNumber: 474,
+              lineNumber: 472,
               columnNumber: 19
             }, this) }, void 0, false, {
               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-              lineNumber: 473,
+              lineNumber: 471,
               columnNumber: 17
             }, this),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -25684,7 +25676,7 @@ function App() {
               false,
               {
                 fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                lineNumber: 476,
+                lineNumber: 474,
                 columnNumber: 17
               },
               this
@@ -25693,18 +25685,18 @@ function App() {
               "We'll notify you at ",
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-foreground font-medium", children: email }, void 0, false, {
                 fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                lineNumber: 483,
+                lineNumber: 481,
                 columnNumber: 19
               }, this),
               " the moment PipeForm is ready. Thank you for your interest."
             ] }, void 0, true, {
               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-              lineNumber: 481,
+              lineNumber: 479,
               columnNumber: 17
             }, this)
           ] }, void 0, true, {
             fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-            lineNumber: 472,
+            lineNumber: 470,
             columnNumber: 15
           }, this) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "form",
@@ -25715,7 +25707,7 @@ function App() {
               children: [
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-apiforms-id": "XcAmlRrMLQu3NyhKnPcT" }, void 0, false, {
                   fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                  lineNumber: 493,
+                  lineNumber: 491,
                   columnNumber: 15
                 }, this),
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
@@ -25730,7 +25722,7 @@ function App() {
                     false,
                     {
                       fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                      lineNumber: 496,
+                      lineNumber: 494,
                       columnNumber: 19
                     },
                     this
@@ -25751,14 +25743,14 @@ function App() {
                     false,
                     {
                       fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                      lineNumber: 502,
+                      lineNumber: 500,
                       columnNumber: 19
                     },
                     this
                   )
                 ] }, void 0, true, {
                   fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                  lineNumber: 495,
+                  lineNumber: 493,
                   columnNumber: 17
                 }, this),
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
@@ -25766,12 +25758,12 @@ function App() {
                     "What matters most to you?",
                     /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-muted-foreground font-normal ml-1", children: "(select all that apply)" }, void 0, false, {
                       fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                      lineNumber: 517,
+                      lineNumber: 515,
                       columnNumber: 21
                     }, this)
                   ] }, void 0, true, {
                     fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                    lineNumber: 515,
+                    lineNumber: 513,
                     columnNumber: 19
                   }, this),
                   /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-2", children: FEATURES.map((f) => {
@@ -25795,14 +25787,14 @@ function App() {
                             false,
                             {
                               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                              lineNumber: 533,
+                              lineNumber: 531,
                               columnNumber: 27
                             },
                             this
                           ),
                           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "truncate", children: f.title }, void 0, false, {
                             fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                            lineNumber: 541,
+                            lineNumber: 539,
                             columnNumber: 27
                           }, this)
                         ]
@@ -25811,19 +25803,19 @@ function App() {
                       true,
                       {
                         fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                        lineNumber: 525,
+                        lineNumber: 523,
                         columnNumber: 25
                       },
                       this
                     );
                   }) }, void 0, false, {
                     fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                    lineNumber: 521,
+                    lineNumber: 519,
                     columnNumber: 19
                   }, this)
                 ] }, void 0, true, {
                   fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                  lineNumber: 514,
+                  lineNumber: 512,
                   columnNumber: 17
                 }, this),
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -25835,7 +25827,7 @@ function App() {
                       "Notify me when we launch ",
                       /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ArrowRight, { size: 16 }, void 0, false, {
                         fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                        lineNumber: 554,
+                        lineNumber: 552,
                         columnNumber: 44
                       }, this)
                     ]
@@ -25844,7 +25836,7 @@ function App() {
                   true,
                   {
                     fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                    lineNumber: 550,
+                    lineNumber: 548,
                     columnNumber: 17
                   },
                   this
@@ -25855,22 +25847,22 @@ function App() {
             true,
             {
               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-              lineNumber: 488,
+              lineNumber: 486,
               columnNumber: 15
             },
             this
           ) }, void 0, false, {
             fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-            lineNumber: 470,
+            lineNumber: 468,
             columnNumber: 11
           }, this)
         ] }, void 0, true, {
           fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-          lineNumber: 441,
+          lineNumber: 439,
           columnNumber: 9
         }, this) }, void 0, false, {
           fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-          lineNumber: 440,
+          lineNumber: 438,
           columnNumber: 7
         }, this),
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("footer", { className: "border-t border-border", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground", children: [
@@ -25882,7 +25874,7 @@ function App() {
                 "Pipe",
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: "text-accent", children: "Form" }, void 0, false, {
                   fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-                  lineNumber: 568,
+                  lineNumber: 566,
                   columnNumber: 17
                 }, this)
               ]
@@ -25891,39 +25883,39 @@ function App() {
             true,
             {
               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-              lineNumber: 565,
+              lineNumber: 563,
               columnNumber: 11
             },
             this
           ),
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("p", { className: "text-xs", children: "© 2026 PipeForm. All rights reserved." }, void 0, false, {
             fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-            lineNumber: 570,
+            lineNumber: 568,
             columnNumber: 11
           }, this),
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "flex gap-6 text-xs", children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("a", { href: "#", className: "hover:text-foreground transition-colors", children: "Privacy" }, void 0, false, {
               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-              lineNumber: 574,
+              lineNumber: 572,
               columnNumber: 13
             }, this),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("a", { href: "#", className: "hover:text-foreground transition-colors", children: "Terms" }, void 0, false, {
               fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-              lineNumber: 577,
+              lineNumber: 575,
               columnNumber: 13
             }, this)
           ] }, void 0, true, {
             fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-            lineNumber: 573,
+            lineNumber: 571,
             columnNumber: 11
           }, this)
         ] }, void 0, true, {
           fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-          lineNumber: 564,
+          lineNumber: 562,
           columnNumber: 9
         }, this) }, void 0, false, {
           fileName: "/Users/danielpro/Development/Personal/pipeform.to/src/app/App.tsx",
-          lineNumber: 563,
+          lineNumber: 561,
           columnNumber: 7
         }, this)
       ]
@@ -25952,4 +25944,4 @@ if (rootElement.hasChildNodes()) {
     columnNumber: 36
   }, void 0));
 }
-//# sourceMappingURL=index-DNlX8gBN.js.map
+//# sourceMappingURL=index-C5v9GY_P.js.map

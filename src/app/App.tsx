@@ -408,13 +408,11 @@ export default function App() {
             <div className="bg-background px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-1.5">
-                  {[...Array(5)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-2 h-2 rounded-full bg-accent"
-                      style={{ opacity: Math.round((1 - i * 0.15) * 100) / 100 }}
-                    />
-                  ))}
+                  {["bg-accent", "bg-accent/85", "bg-accent/70", "bg-accent/55", "bg-accent/40"].map(
+                    (bg, i) => (
+                      <div key={i} className={`w-2 h-2 rounded-full ${bg}`} />
+                    ),
+                  )}
                 </div>
                 <p
                   className="text-sm font-semibold text-foreground font-bricolage"
