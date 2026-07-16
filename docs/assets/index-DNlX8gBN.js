@@ -25535,7 +25535,7 @@ function App() {
                 "div",
                 {
                   className: "w-2 h-2 rounded-full bg-accent",
-                  style: { opacity: 1 - i * 0.15 }
+                  style: { opacity: Math.round((1 - i * 0.15) * 100) / 100 }
                 },
                 i,
                 false,
@@ -25952,4 +25952,4 @@ if (rootElement.hasChildNodes()) {
     columnNumber: 36
   }, void 0));
 }
-//# sourceMappingURL=index-WPv0oU5a.js.map
+//# sourceMappingURL=index-DNlX8gBN.js.map
