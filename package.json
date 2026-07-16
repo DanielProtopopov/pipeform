@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "NODE_ENV=development vite build",
     "postbuild": "react-snap",
     "dev": "vite"
   },

@@ -1,3 +1,9 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+
+.font-figtree { font-family: 'Figtree', sans-serif; }
+.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif; }
+.font-mono-jetbrains { font-family: 'JetBrains Mono', monospace; }
+
+html { scroll-behavior: smooth; }

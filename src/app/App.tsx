@@ -161,15 +161,13 @@ export default function App() {
 
   return (
     <div
-      className="min-h-screen bg-background text-foreground"
-      style={{ fontFamily: "'Figtree', sans-serif" }}
+      className="min-h-screen bg-background text-foreground font-figtree"
     >
       {/* Nav */}
       <header className="fixed top-0 inset-x-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <span
-            className="text-xl font-bold tracking-tight text-foreground"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            className="text-xl font-bold tracking-tight text-foreground font-bricolage"
           >
             Pipe<span className="text-accent">Form</span>
           </span>
@@ -245,16 +243,14 @@ export default function App() {
       <section className="pt-40 pb-28 px-6">
         <div className="max-w-4xl mx-auto">
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border text-xs text-muted-foreground mb-8"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border text-xs text-muted-foreground mb-8 font-mono-jetbrains"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             Lead to inbox. Done.
           </div>
 
           <h1
-            className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-6"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-6 font-bricolage"
           >
             Never lose
             <br />
@@ -269,8 +265,7 @@ export default function App() {
           </p>
 
           <div
-            className="mb-10 bg-card border border-border rounded-lg px-5 py-4 text-sm overflow-x-auto"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            className="mb-10 bg-card border border-border rounded-lg px-5 py-4 text-sm overflow-x-auto font-mono-jetbrains"
           >
             <span className="text-muted-foreground select-none mr-3">{">"}</span>
             <span className="text-accent">{"<form"}</span>
@@ -303,8 +298,7 @@ export default function App() {
           </div>
 
           <p
-            className="mt-8 text-xs text-muted-foreground"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            className="mt-8 text-xs text-muted-foreground font-mono-jetbrains"
           >
             200+ developers on the waitlist
           </p>
@@ -319,14 +313,12 @@ export default function App() {
       <section id="how-it-works" className="py-28 px-6">
         <div className="max-w-6xl mx-auto">
           <p
-            className="text-xs text-accent mb-3 tracking-widest uppercase"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            className="text-xs text-accent mb-3 tracking-widest uppercase font-mono-jetbrains"
           >
             How it works
           </p>
           <h2
-            className="text-3xl md:text-4xl font-bold mb-16 max-w-lg leading-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            className="text-3xl md:text-4xl font-bold mb-16 max-w-lg leading-tight font-bricolage"
           >
             Live in three steps.
           </h2>
@@ -335,14 +327,12 @@ export default function App() {
             {STEPS.map((step) => (
               <div key={step.number} className="bg-background p-8">
                 <span
-                  className="block text-4xl font-bold text-accent mb-4 leading-none"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  className="block text-4xl font-bold text-accent mb-4 leading-none font-mono-jetbrains"
                 >
                   {step.number}
                 </span>
                 <h3
-                  className="text-lg font-semibold mb-3"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  className="text-lg font-semibold mb-3 font-bricolage"
                 >
                   {step.title}
                 </h3>
@@ -351,8 +341,7 @@ export default function App() {
                 </p>
                 {step.code && (
                   <div
-                    className="bg-card border border-border rounded px-3 py-2 text-xs text-accent/80 overflow-x-auto"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    className="bg-card border border-border rounded px-3 py-2 text-xs text-accent/80 overflow-x-auto font-mono-jetbrains"
                   >
                     {step.code}
                   </div>
@@ -371,14 +360,12 @@ export default function App() {
       <section id="features" className="py-28 px-6">
         <div className="max-w-6xl mx-auto">
           <p
-            className="text-xs text-accent mb-3 tracking-widest uppercase"
-            style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            className="text-xs text-accent mb-3 tracking-widest uppercase font-mono-jetbrains"
           >
             Features
           </p>
           <h2
-            className="text-3xl md:text-4xl font-bold mb-4 max-w-lg leading-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            className="text-3xl md:text-4xl font-bold mb-4 max-w-lg leading-tight font-bricolage"
           >
             Everything you need to handle forms at scale.
           </h2>
@@ -402,10 +389,7 @@ export default function App() {
                     </div>
                     <div>
                       <h3
-                        className="font-semibold mb-2 text-foreground"
-                        style={{
-                          fontFamily: "'Bricolage Grotesque', sans-serif",
-                        }}
+                        className="font-semibold mb-2 text-foreground font-bricolage"
                       >
                         {f.title}
                       </h3>
@@ -433,8 +417,7 @@ export default function App() {
                   ))}
                 </div>
                 <p
-                  className="text-sm font-semibold text-foreground"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  className="text-sm font-semibold text-foreground font-bricolage"
                 >
                   And many others — this is just the beginning.
                 </p>
@@ -458,14 +441,12 @@ export default function App() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p
-              className="text-xs text-accent mb-3 tracking-widest uppercase"
-              style={{ fontFamily: "'JetBrains Mono', monospace" }}
+              className="text-xs text-accent mb-3 tracking-widest uppercase font-mono-jetbrains"
             >
               Early access
             </p>
             <h2
-              className="text-3xl md:text-4xl font-bold mb-4 leading-tight"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              className="text-3xl md:text-4xl font-bold mb-4 leading-tight font-bricolage"
             >
               Be first to know when we launch.
             </h2>
@@ -493,8 +474,7 @@ export default function App() {
                   <CheckCircle2 size={24} className="text-accent" />
                 </div>
                 <h3
-                  className="text-xl font-bold mb-2"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  className="text-xl font-bold mb-2 font-bricolage"
                 >
                   {"You're on the list!"}
                 </h3>
@@ -583,13 +563,12 @@ export default function App() {
       <footer className="border-t border-border">
         <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <span
-            className="font-bold text-base text-foreground"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            className="font-bold text-base text-foreground font-bricolage"
           >
             Pipe<span className="text-accent">Form</span>
           </span>
           <p className="text-xs">
-            &copy; {new Date().getFullYear()} PipeForm. All rights reserved.
+            &copy; 2026 PipeForm. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs">
             <a href="#" className="hover:text-foreground transition-colors">
@@ -601,8 +580,6 @@ export default function App() {
           </div>
         </div>
       </footer>
-
-      <style>{`html { scroll-behavior: smooth; }`}</style>
     </div>
   );
 }

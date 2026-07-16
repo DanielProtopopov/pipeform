@@ -4422,6 +4422,22 @@
   --sidebar-ring: oklch(43.9% 0 0);
 }
 
+.font-figtree {
+  font-family: Figtree, sans-serif;
+}
+
+.font-bricolage {
+  font-family: Bricolage Grotesque, sans-serif;
+}
+
+.font-mono-jetbrains {
+  font-family: JetBrains Mono, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
