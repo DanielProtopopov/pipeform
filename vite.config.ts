@@ -16,30 +16,12 @@ function figmaAssetResolver() {
   }
 }
 
-function disableHydrationCheck() {
-  return {
-    name: 'disable-hydration-check',
-    transform(code, id) {
-      if (id.includes('react-dom')) {
-        const newCode = code.replace(
-          /function checkForUnmatchedText\s*\([^)]*\)\s*\{/,
-          '$& return;'
-        );
-        return {
-          code: newCode,
-          map: null
-        };
-      }
-    }
-  };
-}
 
 export default defineConfig({
   mode: 'development',
   publicDir: 'public',
   plugins: [
     figmaAssetResolver(),
-    disableHydrationCheck(),
     // The React and Tailwind plugins are both required for Make, even if
     // Tailwind is not being actively used – do not remove them
     react(),
@@ -56,8 +38,8 @@ export default defineConfig({
     outDir: 'docs',
     emptyOutDir: true,
     target: 'es2015',
-    minify: false,
-    sourcemap: true,
+    minify: true,
+    sourcemap: false,
   },
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
